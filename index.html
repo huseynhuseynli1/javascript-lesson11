@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+      td{
+      	border:1px solid black;
+      	width: 80px;
+      	height: 30px;
+      	line-height: 30px;
+      	text-align: center;
+      }
+
+      td:nth-child(1){
+      	background-color: red;
+      	color: white;
+      }
+
+      td:nth-child(2){
+      	background-color: brown;
+      	color: white;
+      }
+
+      td:nth-child(3){
+      	background-color: blue;
+      	color: white;
+      }
+
+
+	</style></head>
+<body>
+Ad:<input type="text" id="ad">
+<br><br>
+Soyad:<input type="text" id="soyad">
+<br><br>
+Yas:<input type="text" id="yas">
+<br><br>
+<button onclick="h()">Elave et</button>
+
+
+<table  id="cedvel">
+<tr>
+	<td>ad</td>
+	<td>soyad</td>
+	<td>yas</td>
+</tr>
+</table>
+<script type="text/javascript">
+function  h() {
+	var sira=document.createElement("tr");
+	document.getElementById("cedvel").appendChild(sira);
+	var sutun1=document.createElement("td");
+	var sutun2=document.createElement("td");
+	var sutun3=document.createElement("td");
+	sira.appendChild(sutun1);
+	sira.appendChild(sutun2);
+	sira.appendChild(sutun3);
+  	
+  	var ad=document.getElementById("ad").value;
+  	var soyad=document.getElementById("soyad").value;
+  	var yas=document.getElementById("yas").value;
+
+  	sutun1.innerHTML=ad;
+  	sutun2.innerHTML=soyad;
+  	sutun3.innerHTML=yas;
+
+	}	
+
+
+
+
+</script>
+</body>
+</html>
